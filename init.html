@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Number</title>
+</head>
+<body>
+    <h1>Number Display</h1>
+    <p>The number is: <span id="number"></span></p>
+
+    <script>
+        fetch('https://run.mocky.io/v3/7e816e1d-dd63-4d59-a280-cb62aa83e751')
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('number').innerText = data.number;
+          })
+          .catch(error => console.error('Error:', error));
+    </script>
+</body>
+</html>
